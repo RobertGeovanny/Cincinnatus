@@ -1,0 +1,15 @@
+$color-titulo: crimson; /* Declaracion de una variable en SASS '$nombre-variable: valor-variable;' y se 
+                            declaran al principio del archivo SASS para declarla globalmente*/
+$color-parrafo: #4682B4;
+
+@use 'reset';
+@use 'navbar'; /* Para llamar los Parshalls se usa la regla 'add rule' que nos agrega las subcadenas del archivo 'navbar.scss' */
+
+h2 {
+    color: $color-titulo;
+    font-size: 3rem;
+}
+
+p {
+    color: $color-parrafo;
+}

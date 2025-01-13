@@ -1,0 +1,14 @@
+/* Este es un archivo 'Parshall' este archivo no se compila, estos archivos se usan posteriormente usarlos en un archivo 'SASS' 
+que referencie a todos esos subarchivos*/
+
+.nav { 
+    background-color: #efefef;
+
+    &__container {
+        background-color: #222;
+        width: 90%;
+        margin: 0 auto;
+        
+    }
+}
+
