@@ -1,0 +1,124 @@
+/* #titulo {
+    color:crimson;
+} */
+
+/* .subtitulo {
+    color: darkred;
+} */
+
+.parrafo {
+    font-size: 19px;
+}
+
+#fondo {
+    background-color: rgba(255,0,0,0.3);
+    /* opacity: 0.3; */
+    height: 200px;
+    background: #f00 url('/IMG/dead-stranding.jpg') repeat-y center bottom / 100px 100px;
+
+}
+
+
+
+.margin {
+    background-color: aquamarine;
+    margin: 15px;
+    padding: 30px 15px 5px;
+    border: solid 1px black;
+    /* border-style: solid sirve para colocar el borde solid sin indicar los pixeles */
+    height: 100px;
+    width: 50px ;
+    overflow: scroll;
+    outline: 1px solid red;
+}
+
+.text {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    text-decoration: overline;
+    text-shadow: 3px 5px 5px red;
+}
+
+.listas {
+    background-color: aquamarine;
+    list-style-type: circle;
+    /* padding-left: 0; */
+    /* list-style-position: inside; */
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: blueviolet;
+}
+
+a:hover {
+    color: yellow;
+}
+
+a:active {
+    color: red;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: solid 1px #eee;
+}
+
+th {
+    background-color: tomato;
+    text-align: left;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #eee;
+}
+
+tr:hover {
+    background-color: #aaa;
+    cursor: pointer;
+}
+
+span {
+    display: block;
+    /* visibility: hidden; */
+    max-width: 300px;
+    background-color: #f00;
+}
+
+.inline {
+    display: inline;
+}
+
+
+#position {
+    position: sticky;
+    left: 20px;
+    top: 20px;
+}
+
+.left {
+    float: left;
+    width: 100px;
+}
+
+.container {
+    display: flex;
+}
+
+/*
+.subtitulo {
+    color: #ff0000;
+}
+.subtitulo {
+    color: rgb(0, 255, 255);
+}
+*/
+
