@@ -1,0 +1,35 @@
+@use 'mixinsfunc';
+
+@mixin arreglar-imagen{
+     background: {
+          size: cover;
+          repeat: no-repeat;
+          position: center;
+     };
+}
+
+.hero {
+     
+     &__container {
+          height: calc(100vh - 70px);
+          background-image: linear-gradient(#0000006d, rgba(0,0,0, 0.458)), url('/IMG/dead-stranding.jpg');
+
+          @include mixinsfunc.crear-flexbox(center);
+
+          @include arreglar-imagen;
+
+          &__texts{
+               width: 90%;
+               color: #fff;
+          }
+
+          &__title{
+               font-size: mixinsfunc.pixeles-rem(40);
+               margin-bottom: mixinsfunc.pixeles-rem(10);
+          }
+
+          &__paragraph {
+               font-size: mixinsfunc.pixeles-rem(18);
+          }
+     }
+}

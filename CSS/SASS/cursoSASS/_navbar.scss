@@ -1,0 +1,39 @@
+/* Este es un archivo 'Parshall' este archivo no se compila, estos archivos se usan posteriormente en un archivo 'SASS' 
+que referencia a todos estos subarchivos*/
+
+/* Tu puedes usar en las variables seletores interpolando a continuacion un ejemplo */
+@use 'mixinsfunc';
+
+$selector: '.nav';
+
+#{$selector} { 
+    background-color: #efefef;
+
+    &__container {
+        background-color: #4682B4;
+        width: 90%;
+        margin: 0 auto;
+        height: 70px;
+        @include mixinsfunc.crear-flexbox(space-evenly)
+    }
+
+    &__item {
+        color: #fff;
+        text-decoration: none;
+
+        &--active {
+            text-decoration: underline;
+        }
+
+        &:hover {
+            color: red;
+        }
+
+        @media (min-width: 764px) {
+            .nav__container {
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+

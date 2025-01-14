@@ -1,0 +1,79 @@
+/* Declaracion de una variable en SASS '$nombre-variable: valor-variable;' y se 
+    declaran al principio del archivo SASS para declarla globalmente*/
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Este es un archivo 'Parshall' este archivo no se compila, estos archivos se usan posteriormente en un archivo 'SASS' 
+que referencia a todos estos subarchivos*/
+/* Tu puedes usar en las variables seletores interpolando a continuacion un ejemplo */
+.nav {
+  background-color: #efefef;
+}
+.nav__container {
+  background-color: #4682B4;
+  width: 90%;
+  margin: 0 auto;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.nav__item {
+  color: #fff;
+  text-decoration: none;
+}
+.nav__item--active {
+  text-decoration: underline;
+}
+.nav__item:hover {
+  color: red;
+}
+@media (min-width: 764px) {
+  .nav__item .nav__container {
+    justify-content: flex-end;
+  }
+}
+
+/* Para llamar los Parshalls se usa la regla 'add rule' que nos agrega las subcadenas del archivo 'navbar.scss' */
+/* @use 'animaciones'; */ /* En scss se pueden usar ciclos */
+/* Este es un archivo 'Parshall' este archivo no se compila, estos archivos se usan posteriormente en un archivo 'SASS' 
+que referencia a todos estos subarchivos*/
+/* Tu puedes usar en las variables seletores interpolando a continuacion un ejemplo */
+.hero__container {
+  height: calc(100vh - 70px);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4274509804), rgba(0, 0, 0, 0.458)), url("/IMG/dead-stranding.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hero__container__texts {
+  width: 90%;
+  color: #fff;
+}
+.hero__container__title {
+  font-size: 2.5rem;
+  margin-bottom: 0.625rem;
+}
+.hero__container__paragraph {
+  font-size: 1.125rem;
+}
+
+h2 {
+  color: crimson;
+  font-size: 3rem;
+}
+
+p {
+  color: #222;
+}
+
+/*# sourceMappingURL=style.css.map */
