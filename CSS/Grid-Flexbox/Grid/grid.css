@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 22px;
+    line-height: 2;
+    background-color: #000;
+    color: #fff;
+}
+
+.conteiner {
+    max-width: 960px;
+    margin: 100px auto;
+    background-color: wheat;
+    outline: 6px solid yellow;
+    display: grid;
+    /* Este selector te permite manipular las columnas de la pagina */
+    /* grid-template-columns: 50% 50%; 
+    grid-template-rows: 200px 300px; */ /* Este selector te permite manipular las filas de la pagina */
+    grid-template-columns: auto auto auto;
+/*     grid-template-rows: auto auto auto;
+    grid-auto-flow: dense; */
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.parte {
+    background-color: red;
+    font-family: monospace;
+    font-weight: bold;
+    padding: 22px;
+    border: bisque 1px solid;
+
+    text-align: center;
+    border-radius: 8px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.parte:hover {
+    color: #000;
+}
+
+
+.parte-1 {
+    background-color: orange;
+    grid-area: 1/1 /span 2/span 2;
+}
+
+.parte-2 {
+    background-color: firebrick;
+}
+
+.parte-3 {
+    background-color: blue;
+}
+
+.parte-4 {
+    background-color: yellowgreen;
+}
+
+.parte-5 {
+    background-color: purple;
+    grid-column: 2/4;
+}
+
+.parte-6 {
+    background-color: fuchsia;
+    /* grid-column: 1/3; */
+}
+
+.parte-7 {
+    background-color: aqua;
+    /* grid-column: 1/4; */
+}
+
+.parte-8 {
+    background-color: dimgray;
+}
+
+.parte-9 {
+    background-color: chartreuse;
+    grid-column: 1/4;
+}
