@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: darksalmon;
+}
+
+.container{
+    width: 650px;
+    height: 650px;
+    background-color: bisque;
+    margin: 100px auto;
+    margin-top: 2rem;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    grid-template-areas: 
+        "imagen-1 imagen-2 imagen-2 imagen-3"
+        "imagen-1 imagen-4 imagen-4 imagen-4"
+        "imagen-5 imagen-6 imagen-7 imagen-7"
+        "imagen-8 imagen-6 imagen-9 imagen-9"
+    ;
+}
+
+.imagen{
+    background-color: burlywood;
+}
+
+.imagen-1{
+    grid-area: imagen-1;
+    background-image: url(IMG/demon-souls.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.imagen-2{
+    grid-area: imagen-2;
+    background-image: url(IMG/noktella.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.imagen-3{
+    grid-area: imagen-3;
+    background-image: url(IMG/Sekiro.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.imagen-4{
+    grid-area: imagen-4;
+    background-image: url(IMG/godfrey.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.imagen-5{
+    grid-area: imagen-5;
+    background-image: url(IMG/fondoParaMiniProyecto.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.imagen-6{
+    grid-area: imagen-6;
+    background-image: url(IMG/dead-stranding.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.imagen-7{
+    grid-area: imagen-7;
+    background-image: url(IMG/Elden.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.imagen-8{
+    grid-area: imagen-8;
+    background-image: url(IMG/dark-souls.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.imagen-9{
+    grid-area: imagen-9;
+    background-image: url(IMG/malenia.avif);
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width:650px){
+    body{
+        background-color: darkorchid;
+    }
+
+    .container{
+        width: auto;
+        background-color: darkslateblue;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 2fr 2fr 1fr 2fr 2fr 1fr 1fr 2fr;
+        grid-template-areas:
+            "imagen-1 imagen-2"
+            "imagen-1 imagen-4"
+            "imagen-1 imagen-3"
+            "imagen-5 imagen-3"
+            "imagen-7 imagen-3"
+            "imagen-7 imagen-8"
+            "imagen-6 imagen-8"
+            "imagen-6 imagen-9"
+            
+        ;
+    }
+}
