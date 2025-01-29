@@ -1,0 +1,17 @@
+footer{
+    background-color: #222;
+    padding: 4rem;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+
+    .footer{
+        transition: color 0.3s ease;
+        color: #fff;
+    }
+
+    .footer:hover{
+        color: cornflowerblue;
+    }
+}

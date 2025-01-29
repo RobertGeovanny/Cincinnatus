@@ -1,0 +1,25 @@
+.container{
+    width: 100%;
+    padding-right: 17px;
+    margin: 0 auto;
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+
+    .articulo{
+        transition: box-shadow 0.3s ease;
+        background-color: #fff;
+        margin: 1rem 0;
+        border-radius: 0.5rem;
+        padding: 0.25rem 0;
+        cursor: pointer;
+    }
+
+    .subtitulo, .parrafo{
+        margin: 1rem;
+    }
+
+    .articulo:hover{
+        box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.5);
+    }
+}

@@ -1,0 +1,79 @@
+// IMPORTANTE: 
+// Este codigo fue generado con DeepSeek este fue el prompt utilizado: 
+//'Estoy creando un blog de ilustraciones con html y css con sass. Ahora mismo quiero agregar la animación de presionar una imagen para que se vea mas interactivo.'
+// Lo agregue para experimentar como se utilizaria una 'IA' para complementar mi codigo
+
+// SCSS
+// Variables de animación
+$press-duration: 0.3s;
+$press-scale: 0.95;
+$shadow-intensity: 15px;
+
+.articulo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform $press-duration ease;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  // Efecto al presionar
+  &:active .pressable-image {
+    transform: scale($press-scale);
+    
+    &::after {
+      opacity: 0.2;
+    }
+  }
+
+  // Efecto hover suave
+  &:hover .pressable-image {
+    transform: translateY(-2px);
+    box-shadow: 0 8px $shadow-intensity rgba(0,0,0,0.2);
+  }
+}
+
+.pressable-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: all $press-duration cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  
+  // Efecto de "profundidad"
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity $press-duration ease;
+  }
+}
+
+// Opcional: Efecto de click para dispositivos táctiles
+@media (hover: none) {
+  .articulo {
+    &.pressed .pressable-image {
+      transform: scale($press-scale);
+    }
+  }
+}
+
+.articulo {
+    perspective: 1000px;
+    
+    .pressable-image {
+      transform-style: preserve-3d;
+      
+      &:active {
+        transform: scale($press-scale) rotateX(10deg) rotateY(-5deg);
+      }
+    }
+  }

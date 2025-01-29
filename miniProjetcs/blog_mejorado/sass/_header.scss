@@ -1,0 +1,17 @@
+header{
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 3rem 2rem;
+
+    #titulo{
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    div{
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,125 @@
+header {
+  background-color: #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 3rem 2rem;
+}
+header #titulo {
+  font-size: 3rem;
+  text-align: center;
+}
+header div {
+  font-size: 1rem;
+}
+
+.container {
+  width: 100%;
+  padding-right: 17px;
+  margin: 0 auto;
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+.container .articulo {
+  transition: box-shadow 0.3s ease;
+  background-color: #fff;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0;
+  cursor: pointer;
+}
+.container .subtitulo, .container .parrafo {
+  margin: 1rem;
+}
+.container .articulo:hover {
+  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.5);
+}
+
+.articulo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.articulo:hover {
+  cursor: pointer;
+}
+.articulo:active .pressable-image {
+  transform: scale(0.95);
+}
+.articulo:active .pressable-image::after {
+  opacity: 0.2;
+}
+.articulo:hover .pressable-image {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pressable-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+}
+.pressable-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+@media (hover: none) {
+  .articulo.pressed .pressable-image {
+    transform: scale(0.95);
+  }
+}
+.articulo {
+  perspective: 1000px;
+}
+.articulo .pressable-image {
+  transform-style: preserve-3d;
+}
+.articulo .pressable-image:active {
+  transform: scale(0.95) rotateX(10deg) rotateY(-5deg);
+}
+
+footer {
+  background-color: #222;
+  padding: 4rem;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+footer .footer {
+  transition: color 0.3s ease;
+  color: #fff;
+}
+footer .footer:hover {
+  color: cornflowerblue;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #efefef;
+}
+
+/*# sourceMappingURL=style.css.map */
