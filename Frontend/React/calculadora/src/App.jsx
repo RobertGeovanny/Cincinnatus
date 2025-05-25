@@ -1,6 +1,7 @@
 import './App.css'
 import freeCodeCampLogo from './image/freecodecamp.png'
 import Boton from './component/Boton.jsx'
+import Pantalla from './component/Pantalla.jsx'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         />
       </header>
       <section className='contenedor-calculadora'>
+        <Pantalla />
         <div className='fila'>
           <Boton>1</Boton>
           <Boton>2</Boton>
