@@ -1,7 +1,7 @@
 import './App.css'
-import './hojas-de-estilo/Boton.css'
 import freeCodeCampLogo from './image/freecodecamp.png'
 import Boton from './component/Boton.jsx'
+import Contador from './component/Contador.jsx'
 
 function App() {
 
@@ -22,16 +22,17 @@ function App() {
           alt='Logo de freeCodeCamp' />
       </header>
       <section className='contenedor-principal'>
+        <Contador numClics='0' />
         <Boton 
           texto='Clic'
           esBotonDeClic={true}
-          manejarClic={manejarClic}
+          manejarClic={manejarClic} 
         />
 
         <Boton 
           texto='Reiniciar'
           esBotonDeClic={false}
-          manejarClic={reiniciarContador}
+          manejarClic={reiniciarContador} 
         />
       </section>
     </main>
