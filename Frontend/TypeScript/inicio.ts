@@ -72,11 +72,166 @@ const n: number = obj;
 // esto significa que la funcion esperada tiene un parametro de nombre name y que recibe un string
 // y lo que devuelve en este caso 'void' porque no devuelve nada 
 // void es como decirle a la funcion 'no me importa lo que devuelvas, no devuelvas nada'
-const sayHiFromFunction = (fn: (name: string) => void) => {
-    return fn('Robert')
-}
+// const sayHiFromFunction = (fn: (name: string) => void) => {
+//     return fn('Robert')
+// }
 
-const sayHi = (name: string) => {
-    console.log(`Hola ${name}`)
-}
-sayHiFromFunction(sayHi)
+// const sayHi = (name: string) => {
+//     console.log(`Hola ${name}`)
+// }
+// sayHiFromFunction(sayHi)
+
+// Tipar las arrow-functions 2 formas
+// const sumar = (a:number, b:number): number => {
+//     return a + b;
+// }
+
+// const restar: (a:number, b:number) => number = (a, b) => {
+//     return a - b;
+// }
+
+//never 
+// function throwError(message: string): never {
+//     throw new Error(message);
+// }
+
+// Type Alias
+// type Hero = {
+//   name: string
+//   age: number
+// }
+
+// let hero: Hero = {
+//   name: 'thor',
+//   age: 1500
+// };
+
+// function createHero(hero: Hero): Hero {
+//   const { name, age } = hero
+//   return { name, age }
+// }
+
+// const thor = createHero({ name: 'Thor', age: 1500 })
+
+// Optional properties
+// type HeroId = `${string}-${string}-${string}-${string}-${string}`
+
+// type Hero = {
+//   id?: HeroId
+//   name: string
+//   age: number
+//   isActive?: boolean
+// }
+
+// let hero: Hero = {
+//   name: 'thor',
+//   age: 1500
+// };
+
+// function createHero(hero: Hero): Hero {
+//   const { name, age } = hero
+//   return { 
+//     id: crypto.randomUUID(),
+//     name, 
+//     age,
+//     isActive: true
+//   }
+// }
+
+// const thor = createHero({ name: 'Thor', age: 1500 })
+
+// template union types
+
+// type HexadecimalColor = `#${string}`
+
+// const color: HexadecimalColor = '0033ff' //hexadecimales
+// const color2: HexadecimalColor = '#0033ff' //hexadecimales
+
+// Union Types
+// type HeroPowerScale = 'local' | 'planetary' | 'galactic' | 'universal' | 'multiversal' // basicamente podemos asignar una de estas opciones no mas.
+// type HeroId = `${string}-${string}-${string}-${string}-${string}`
+
+// let annn: number | string // puede ser un numero o un string
+// annn = 'Hola'
+
+// type HeroBasicInfo = {
+//   name: string,
+//   age: number,
+// }
+
+// type HeroProperties = {
+//   readonly id?: HeroId
+//   isActive?: boolean
+//   powerScale?: HeroPowerScale
+// }
+
+// type Hero = HeroBasicInfo & HeroProperties
+
+
+// let hero: Hero = {
+//   name: 'thor',
+//   age: 1500
+// };
+
+// function createHero(input: HeroBasicInfo): Hero {
+//   const { name, age } = input
+//   return { 
+//     id: crypto.randomUUID(),
+//     name, 
+//     age,
+//     isActive: true
+//   }
+// }
+
+// const thor = createHero({ name: 'Thor', age: 1500 })
+// thor.powerScale = "planetary"
+
+// Type Indexing
+// type HeroProperties = {
+//   isActive: boolean,
+//   address: {
+//     planet: string,
+//     city: string
+//   }
+// }
+
+// const addressHero: HeroProperties['address'] = {
+//   planet: 'Earth',
+//   city: 'Madrid'
+// }
+
+// const address = {
+//   planet: 'Earth',
+//   city: 'Madrid'
+// }
+
+// type Address = typeof address
+
+// const addressTwitch: Address = {
+//   planet: 'Mars',
+//   city: 'Twitch'
+// }
+
+// Type from function return
+
+// function createAddress() {
+//   return {
+//     planet: 'Tierra',
+//     city: 'Barcelona'
+//   }
+// }
+
+// type Address = ReturnType<typeof createAddress>
+
+// const languages: string[] = []; // Le indicamos que queremos un Array de strings pero solo de string, si agregamos otro tipo de dato se rompe
+//                  Array<string>
+
+// const languages: (string | number | boolean)[] = []; // para agregar mas de un tipo de dato
+
+// languages.push('JavaScript')
+// languages.push('JavaScript')
+// languages.push('JavaScript')
+// languages.push('JavaScript')
+// languages.push(true)
+
+
